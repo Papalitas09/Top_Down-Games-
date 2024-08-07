@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjbfp50hxaas0"]
+
+[ext_resource type="Texture2D" uid="uid://cfos2p1o0nphw" path="res://Assets/mystic_woods_free_2.2/sprites/tilesets/floors/wooden.png" id="1_0v0dr"]
+
+[node name="Control" type="Node2D"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+scale = Vector2(4.6, 3.64)
+texture_normal = ExtResource("1_0v0dr")
+action = "pencet"
