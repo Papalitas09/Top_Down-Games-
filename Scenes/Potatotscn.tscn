@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ep2sgp7m7i75" path="res://Assets/Potatp.png" id="2_o4p4u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hp18i"]
-radius = 68.0074
+radius = 41.0122
 
 [node name="Area2D" type="Area2D"]
 z_index = 1
 script = ExtResource("1_kcbrl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o4p4u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
