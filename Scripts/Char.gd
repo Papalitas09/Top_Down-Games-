@@ -38,22 +38,18 @@ func move():
 	if Input.is_action_pressed("Right"):
 		velocity = Vector2.RIGHT * speed 
 		moving = true
-		
 		dir = "Right"
 	elif Input.is_action_pressed("Left"):
 		velocity = Vector2.LEFT * speed 
 		moving = true
-		
 		dir = "Left"
 	elif Input.is_action_pressed("Down"):
 		velocity = Vector2.DOWN * speed 
 		moving = true
-		
 		dir = "Down"
 	elif Input.is_action_pressed("Top"):
 		velocity = Vector2.UP * speed 
 		moving = true
-	
 		dir = "Top"
 		
 	#Mobile
