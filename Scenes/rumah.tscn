@@ -65,6 +65,7 @@ texture = ExtResource("2_wmkr0")
 8:4/0 = 0
 8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:4/0/physics_layer_0/angular_velocity = 0.0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:4/0 = 0
 9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:4/0/physics_layer_0/angular_velocity = 0.0
@@ -183,26 +184,29 @@ texture = ExtResource("2_wmkr0")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-42, 8, -1.5, -12.5, 38, 6.5, 34.5, 46, -36.5, 44.5)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-42, 8, -1.5, -12.5, 38, 6.5, 33.234, 43.8406, 12.3744, 42.78, 8.13173, 31.8198, -9.8995, 31.4663, -13.0815, 43.8406, -36.5, 44.5)
 
 [sub_resource type="TileSet" id="TileSet_no7tw"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3txrj")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hcisd"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_vh31o"]
 
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_bsh42")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
+y_sort_enabled = true
 tile_set = SubResource("TileSet_no7tw")
 format = 2
+layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(-65536, 0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
 position = Vector2(8, 24)
-shape = SubResource("CircleShape2D_hcisd")
+shape = SubResource("CircleShape2D_vh31o")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
