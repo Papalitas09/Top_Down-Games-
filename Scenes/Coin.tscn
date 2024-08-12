@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyny5q8n140he"]
+[gd_scene load_steps=4 format=3 uid="uid://butouo18bxvi3"]
 
-[ext_resource type="Script" path="res://Scripts/ItemsCollect.gd" id="1_kcbrl"]
-[ext_resource type="Texture2D" uid="uid://ep2sgp7m7i75" path="res://Assets/Potatp.png" id="2_o4p4u"]
+[ext_resource type="Script" path="res://Scripts/ItemsCollect.gd" id="1_hr3sq"]
+[ext_resource type="Texture2D" uid="uid://8bawgj0gevr7" path="res://Assets/coin.png" id="2_tdf03"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hp18i"]
 radius = 41.0122
 
 [node name="Area2D" type="Area2D"]
 z_index = 1
-script = ExtResource("1_kcbrl")
+script = ExtResource("1_hr3sq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_o4p4u")
+texture = ExtResource("2_tdf03")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hp18i")

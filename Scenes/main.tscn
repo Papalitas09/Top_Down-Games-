@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://1y0c8i07dyx0"]
+[gd_scene load_steps=20 format=3 uid="uid://1y0c8i07dyx0"]
 
 [ext_resource type="Texture2D" uid="uid://ccwqn5ouiq2v3" path="res://Assets/mystic_woods_free_2.2/sprites/tilesets/grass.png" id="1_2li6c"]
 [ext_resource type="Texture2D" uid="uid://cb5mfgtdylp8" path="res://Assets/mystic_woods_free_2.2/sprites/Texture/TX Tileset Stone Ground.png" id="3_f0vh6"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/tombol;.gd" id="6_om0ph"]
 [ext_resource type="PackedScene" uid="uid://cyny5q8n140he" path="res://Scenes/Potatotscn.tscn" id="9_g8ra7"]
 [ext_resource type="PackedScene" uid="uid://7vurnm2cbt7u" path="res://Scenes/rumah.tscn" id="11_s0ham"]
+[ext_resource type="PackedScene" uid="uid://butouo18bxvi3" path="res://Scenes/Coin.tscn" id="13_rhqbo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kv2wg"]
 texture = ExtResource("4_0t6fk")
@@ -1780,19 +1781,230 @@ zoom = Vector2(2, 2)
 position = Vector2(410, -261.667)
 script = ExtResource("6_om0ph")
 
+[node name="Label" type="Label" parent="MC"]
+offset_left = 121.667
+offset_top = -68.3333
+offset_right = 161.667
+offset_bottom = -45.3333
+
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.564706, 0.34902, 0.0666667, 1)
 energy = 0.28
 
 [node name="Potato_root" type="Node2D" parent="."]
+z_index = 2
 position = Vector2(-103, -33)
 
-[node name="Potato" parent="Potato_root" instance=ExtResource("9_g8ra7")]
-position = Vector2(483, 295)
-scale = Vector2(0.3, 0.3)
+[node name="potato" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(503, 314)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato2" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(100, 149)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato3" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-1.99994, 445)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato4" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(1039, 643)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato5" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-192, 373)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato6" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-313, 611)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato7" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-298, 268)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato8" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-445, 356)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato9" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(791, 726)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato10" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-1066, 164)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato11" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-745, -230)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato12" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-1021, -192)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato13" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-1031, 668)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato14" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(664, 1176)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato15" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(1883, 1293)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato16" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(1029, -231)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato17" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(445, -326)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato18" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(461, -82)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato19" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(636, -238)
+scale = Vector2(0.2, 0.2)
+
+[node name="potato20" parent="Potato_root" instance=ExtResource("9_g8ra7")]
+position = Vector2(-177, -324)
+scale = Vector2(0.2, 0.2)
 
 [node name="area kebun" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Rumah" parent="area kebun" instance=ExtResource("11_s0ham")]
 position = Vector2(483.39, 150)
+
+[node name="Coin_Root" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(340, 370)
+
+[node name="Coin" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(178, -108)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin2" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-172, 35)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin3" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(656, 43)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin4" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(655, -237)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin5" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(626, -93)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin6" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-292, -98)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin8" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-940, 820)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin9" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-83, 556)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin10" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(321, 455)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin13" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-670, 982)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin14" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(1917, 960)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin15" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(323, -396)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin16" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1249, -120)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin17" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1713, 51)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin18" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1707, 594)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin19" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1243, 426)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin20" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1351, 801)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin21" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1678, 896)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin22" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-929, 512)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin23" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-450, 502)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin24" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-672, 429)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin25" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-551, 781)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin26" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-824, -568)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin27" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1275, -381)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin28" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1824, -568)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin29" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-1497, -790)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin30" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-983, -809)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin31" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(141, -834)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin11" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-146, 388)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin12" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(13, 490)
+scale = Vector2(0.2, 0.2)
+
+[node name="Coin7" parent="Coin_Root" instance=ExtResource("13_rhqbo")]
+position = Vector2(-292, 200)
+scale = Vector2(0.2, 0.2)
