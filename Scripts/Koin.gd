@@ -1,5 +1,6 @@
 extends Area2D
-var bodyin
+var masuk:bool
+@onready var text = $Label
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -7,22 +8,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if bodyin == true and Input.is_action_just_pressed("Open_Door"):
-		get_tree().change_scene_to_file("res://Scenes/DalamRUmah.tscn")
+	if masuk == true and Input.is_action_just_pressed("Take_Items"):
+		queue_free()
 		
-	
-	pass
+		
+
 
 
 func _on_body_entered(body):
-	if body.name == "MC":
-		bodyin = true
+	masuk = true
+	text.visible = true
 	
-		
-	
+
 
 
 func _on_body_exited(body):
-	if body.name == "MC":
-		bodyin = false
-		print("eee")
+	masuk = false
+	text.visible = false

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://lusilutg07ty"]
+
+[ext_resource type="Script" path="res://Scripts/Koin.gd" id="1_a41dj"]
+[ext_resource type="Texture2D" uid="uid://8bawgj0gevr7" path="res://Assets/coin.png" id="2_dmq4s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_30jrj"]
+radius = 26.0192
+
+[node name="Koin" type="Area2D"]
+script = ExtResource("1_a41dj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_dmq4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_30jrj")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -114.0
+offset_top = -73.0
+offset_right = 237.0
+offset_bottom = -31.0
+theme_override_font_sizes/font_size = 30
+text = "Click E for collect a coins"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
